@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body class="row">
+    <header id="header">
+
+
+
+    <nav class= "m-0 p-0 navbar navbar-expand-lg navbar-light">
+
+
+
+        <a  href="" class="logo"><img style="width: 300px;" src="PicsArt_05-18-10.12.29.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+
+    
+        
+        <ul >
+            <li><a href=""> HOME</a></li>
+              <li><a href="#about"> PROFILE</a></li> 
+              <li><a href="#about"> SERVICES</a></li>
+              <li><a href="#about"> PORTFOLIO</a></li> 
+              <li><a href="#about">PRODUCTS</a> </li>
+              <li><a href="#about"> CLIENTS</a></li>
+                <li><a href="#about">CONTACTS</a> </li>
+        </ul>
+
+
+    </div>
+
+
+    
+    </header>
+
+
+
+    <section>
+        <img id="stars" src="stars.png" alt="">
+        <img id="moon" src="moon.png" alt="">
+         <div id="text"><h1 id="text1">Mentegoz</h1><h5 id="text2">Technologies</h5></div> 
+        <img id="mount-beh" src="mountains_behind.png" alt="">
+        <a id="btn" class="btn btn-light" href="#about">Explore</a>
+        <img id="mount-fro" src="mountains_front.png" alt="">
+
+
+    </section>
+    <div class="sec">
+        <div>
+       <h4> About</h4>
+        <h2>Mentegoz</h2>
+        <p  id="about">Mentegoz Technologies is a worldwide Software/IT organization giving IT and related services. We have a well-equiped team for each and every service we provide for each client depending on their business requirements.
+             We will be able to help a client with proper web design and development along with a package of SEO for enhanced business growth. we will also be able to provide our customers a customized software or apps depending on the user requirement and mode of business.
+              we can also assist in promoting our client's business with the help of digital marketing techniques or help in creating a new brand in the market.
+               If you would like to meet us feel free to walk into our office we are currently located in Kozhikode (Calicut), Kerala. We increase the upper hand from unmistakable capacities and have built up the capacity to execute and oversee complex IT frameworks.</p>
+            </div>
+        </div>
+
+    <script>
+        let stars=document.getElementById("stars")
+        let moon=document.getElementById("moon")
+        let mountBeh=document.getElementById("mount-beh")
+        let mountFro=document.getElementById("mount-fro")
+        let text=document.getElementById("text")
+        let text1=document.getElementById("text1")
+        let text2=document.getElementById("text2")
+        let btn=document.getElementById("btn")
+        let header=document.getElementById("header")
+
+        window.addEventListener("scroll",()=>{
+            var value=window.scrollY;
+            console.log(value)
+            stars.style.left=value*0.4+"px"
+            moon.style.top=value*1.05+"px"
+            mountBeh.style.top=value*0.5+"px"
+         mountFro.style.top=value*0+"px"
+         text.style.marginRight=value*4.05+"px"
+          text.style.marginTop=value*.3+"px" 
+         
+          btn.style.marginTop=value*1.3+"px" 
+          if (value>500){
+        header.style.backgroundColor="black";
+        header.style.borderRadius="0 0px 60px 60px"
+          }else{
+            header.style.backgroundColor="transparent";
+          }
+        })
+
+       var about=document.querySelector("#about")
+        about.innerHTML=about.textContent.replace(/\S/gi,"<span>$&</span>")
+    
+        var letters=document.querySelectorAll("span")
+        console.log(letters);
+        for(let i=0;i<letters.length;i++){
+            letters[i].addEventListener("mouseover",()=>{
+                letters[i].classList.add('active')
+            })
+        }
+    </script>
+</body>
+</html>
